@@ -12,6 +12,6 @@ updates:
     # this will not affect the security update PRs which have an internal limit of 10
     open-pull-requests-limit: 1
     commit-message:
-      prefix: "npm dependency"
-      prefix-development: "npm dev dependency"
+      prefix: "dependency"
+      prefix-development: "dev dependency"
     # default PR label 'dependencies'
