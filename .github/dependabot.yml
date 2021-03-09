@@ -1,12 +1,17 @@
 version: 2
+
+# setup dependabot for maintaining npm dependencies
 updates:
-  - package-ecosystem: npm
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: daily
-    open-pull-requests-limit: 10
-    versioning-strategy: widen
-    ignore:
-      - dependency-name: '@types/node'
-        versions:
-          - '>=13'
+      interval: "weekly"
+      day: "monday"
+    target-branch: "develop"
+    # to begin with lets keep the noise low and allow max 1 active version update PRs
+    # this will not affect the security update PRs which have an internal limit of 10
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: "npm dependency"
+      prefix-development: "npm dev dependency"
+    # default PR label 'dependencies'
