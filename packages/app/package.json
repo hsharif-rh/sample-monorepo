@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@sample/components": "^1.0.0",
+    "express-fileupload": "^0.0.4",
     "nyc": "^12.0.1",
     "sanitize.css": "^12.0.1"
   },
